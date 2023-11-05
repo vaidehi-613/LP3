@@ -1,29 +1,35 @@
-// SPDX-License-Identifier: UNLICENSED
+//SPDX-License-Identifier: Unlicensed
 pragma solidity >=0.8.0;
 
-contract bank_account {
-    mapping(address => uint256) public user_balance;
-    mapping(address => bool) public is_user;
+contract Student {
+    struct student {
+        uint256 prn;
+        string name;
+        string class;
+        string department;
+    }
+    uint256 PRN;
+    mapping(uint256 => student) studentMap;
 
-    function create_account() public {
-        require(is_user[msg.sender] == false, "Account already exist");
-        is_user[msg.sender] = true;
+    function addStudent(
+        string memory name,
+        string memory class,
+        string memory department
+    ) public {
+        PRN += 1;
+        
+        studentMap[PRN] = student(PRN, name, class, department);
     }
 
-    function deposit() public payable {
-        require(is_user[msg.sender], "User Account Not Found");
-        user_balance[msg.sender] += msg.value;
+    function getStudent(uint256 _id) public view returns (student memory) {
+        return studentMap[_id];
     }
 
-    function withdraw(uint256 amount) public {
-        require(is_user[msg.sender], "User Account Not Found");
-        require(user_balance[msg.sender] >= amount, "You don't have enough balance to withdraw");
-        require(payable(msg.sender).send(amount));
-        user_balance[msg.sender] -= amount;
+    function totalStudents() public view returns (uint256) {
+        return (PRN);
     }
 
-    function show_balance(address user) public view returns (uint256) {
-        require(is_user[user], "User Account Not Found");
-        return (user_balance[user]);
+    fallback() external {
+        addStudent("Unknown", "FE", "CSE");
     }
 }
