@@ -19,3 +19,10 @@ def randomized_quick_sort(arr):
 arr = [3, 6, 8, 10, 1, 2, 1]
 sorted_arr = randomized_quick_sort(arr)
 print("Sorted array:", sorted_arr)
+
+
+## Random chioce of pivot element helps to prevent the worst case sccenarios, which can occur when the pivot is always the minimum or maximum element.
+## he randomized pivot selection reduces the likelihood of encountering worst-case scenarios, resulting in more consistent and favorable average-case time complexity. 
+
+# time complexity: O(nlogn)
+# space complexity : O(logn)
