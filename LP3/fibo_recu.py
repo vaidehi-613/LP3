@@ -10,3 +10,6 @@ def fibonacci_recursive(n):
 n = 10
 result = [fibonacci_recursive(i) for i in range(n)]
 print(result)
+
+#time complexity : O(2^n) -> cuz recalcution
+# space complexity: O(n) -> due to function call stack
