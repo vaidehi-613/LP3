@@ -29,3 +29,9 @@ quickSort(data, 0, size - 1)
  
 print('Sorted Array in Ascending Order:')
 print(data)
+
+
+## Deterministic approach:
+# Deterministic variant of quick sort algo. typically selects a pivot element in a more systematic way, such as choosing the middle as the pivot.
+# time complexity : O(nlogn)
+# space complexity: O(logn)
