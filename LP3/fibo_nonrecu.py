@@ -15,3 +15,7 @@ def fibonacci(n):
 n = 10
 result = fibonacci(n)
 print(result)
+
+##fib non recursion
+# time complexity : O(n) -> CUZ IT USES SIMPLE LOOP
+# space complexity : O(1) -> cuz it uses constant amt of additional space to store only few variables.
