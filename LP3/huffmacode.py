@@ -71,3 +71,12 @@ if __name__ == "__main__":
     print("Encoded data:", encoded_data)
     decoded_data = huffman_decoding(encoded_data, huffman_tree)
     print("Decoded data:", decoded_data)
+
+
+
+##Huffman encoding is a popular and widely used algorithm for lossless data compression.
+## The primary purpose of Huffman encoding is to efficiently represent data with variable-length codes, where frequently occurring symbols are assigned shorter codes, and less frequent symbols are assigned longer codes. This results in more efficient data compression for data with varying symbol frequencies.
+# IT uses greedy approach.
+    
+# time complexity: O(n logn)
+# space complexity : O(n)
