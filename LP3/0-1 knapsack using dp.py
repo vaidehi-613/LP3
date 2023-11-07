@@ -31,3 +31,8 @@ capacity = 50
 max_value, selected_items = knapsack_0_1(values, weights, capacity)
 print("Maximum value:", max_value)
 print("Selected items:", selected_items)
+
+
+##The 0/1 Knapsack Problem is a classic optimization problem. Given a set of items, each with a weight and a value, and a knapsack with a maximum capacity, the 0/1 Knapsack Problem is to determine the most valuable combination of items to include in the knapsack without exceeding its weight capacity. In this problem, each item can be either taken (1) or left (0), hence the "0/1" terminology.
+## time complexity: O(n*W) W-> max capacity
+## space complexity : O(n*W)  n-> no. of items
