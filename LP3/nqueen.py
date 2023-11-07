@@ -62,3 +62,11 @@ def solveNQ():
   
 # Driver Code
 solveNQ()
+
+
+## using backtracking.
+## Backtracking : it is an algo technique for solving problems recursively by trying to build a solution incrementally , one piece at a time,
+## removing those solutions that fails to satisfy the constraints of the problem at any point of time.
+
+#time complexity: O(N!)  -> 
+# space complexity: O(N) -> due to call stack
